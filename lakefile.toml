@@ -1,0 +1,20 @@
+name = "goodman_supersaturation"
+version = "0.1.0"
+keywords = ["math", "mathlib", "ramsey-theory", "graph-theory"]
+defaultTargets = ["GoodmanSupersaturation"]
+requiresModuleSystem = true
+
+[leanOptions]
+pp.unicode.fun = true
+relaxedAutoImplicit = false
+weak.linter.mathlibStandardSet = true
+maxSynthPendingDepth = 3
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.35.0-rc3"
+
+[[lean_lib]]
+name = "GoodmanSupersaturation"
+globs = ["GoodmanSupersaturation.*"]
